@@ -1,3 +1,4 @@
+const department = require("./department");
 
 module.exports = (sequelize, DataTypes) => {
     const employees = sequelize.define("employees",{
@@ -16,5 +17,10 @@ module.exports = (sequelize, DataTypes) => {
        }
     });
 
+    employees.associate = models => {
+        employees.hasOne(models.department);
+    }
+
     return employees;
+
 }

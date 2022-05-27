@@ -1,7 +1,9 @@
 const db = require("../models");
 
 getEmployeeController = (req,res) => {
-   db.employees.findAll()
+   db.employees.findAll({
+       include: [db.department]
+   })
    .then(data => {
        res.status(200).send(data);
    }

@@ -4,7 +4,7 @@ const {getEmployeeController,
         getEmployeeByIdController, 
         createEmployeeController,
         updateEmployeeController, 
-        deleteEmployeeController} = require('../controllers/controller');
+        deleteEmployeeController} = require('../controllers/employeeController');
 
 router.get('/', getEmployeeController);
 
